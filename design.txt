@@ -1,0 +1,14 @@
+Title: Automated Emails
+App-Desciption: develop an app to automated emails, include activities from internet daily send to the user emails
+                #regarding information of interest
+Objects: ExcelFile:
+            filepath
+            get_data()
+        Email:
+            sender
+            receiver
+            data
+            send() #here I have to include the action.
+        Newsfeed:
+            data:
+            get() # do not forget to include the action, this I am forgetting.
