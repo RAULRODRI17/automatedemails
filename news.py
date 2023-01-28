@@ -1,5 +1,7 @@
 # the following is my key of the api News page:
 # Api Key: fdf5ea1549a7403ab38313aa4322c801
+from translate import translator
+translator = Translator(to_lang='es')
 
 import requests
 # from pprint import pprint
@@ -21,7 +23,9 @@ class NewsEmail:
         articles = self._get_articles(url)
 
         email_body = ''
+
         for article in articles:
+            print(translator.translate(article).title())
             email_body = email_body + "\n" + article['title'] + "\n" + article['url'] + "\n\n"
             # this simbol (\n) is a brakeline to separate among the pther items that I want to separe.
 
